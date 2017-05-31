@@ -1,0 +1,13 @@
+version: '2'
+ 
+services:
+    proxy:
+      build: proxy 
+      ports:
+        - "8080:80"
+      depends_on:
+        - fixit
+    fixit:
+      image: troy0820/seeclickfixit-api:latest
+     
+ 
